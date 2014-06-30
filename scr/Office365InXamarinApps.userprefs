@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Office365InXamarinApps\Office365InXamarinApps\ViewModel\ContactsViewModel.cs">
+    <Files>
+      <File FileName="Office365InXamarinApps\Office365InXamarinApps\Views\ContactsView.xaml" Line="6" Column="10" />
+      <File FileName="Office365InXamarinApps\Office365InXamarinApps\Views\ContactsView.xaml.cs" Line="8" Column="1" />
+      <File FileName="Office365InXamarinApps\Office365InXamarinApps\ViewModel\ContactsViewModel.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
