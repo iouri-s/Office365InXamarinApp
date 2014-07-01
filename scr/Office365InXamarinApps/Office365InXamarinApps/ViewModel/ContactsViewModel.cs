@@ -20,10 +20,24 @@ namespace Office365InXamarinApps.ViewModel
         
         public async void LoadData()
         {
-            Contacts = new ObservableCollection<IContact>(await GetContacts(App.Context));
+            try
+            {
+                Contacts = new ObservableCollection<IContact>(await GetContacts(App.Context));
+            }
+            catch (Exception e)
+            {
+                //todo handle this
+                var error = e.ToString();
+            }
         }
 
-        private ObservableCollection<IContact> Contacts { get; set; }
+        private ObservableCollection<IContact> _contacts;
+ 
+        private ObservableCollection<IContact> Contacts 
+        {
+            get { return _contacts; }
+            set { _contacts = value; }
+        }
 
 #if iOS
         public async Task<IEnumerable<IContact>> GetContacts(UIViewController context)
@@ -31,14 +45,23 @@ namespace Office365InXamarinApps.ViewModel
         public async Task<IEnumerable<IContact>> GetContacts(Context context)
 #endif
         {
-            var client = await EnsureClientCreated(context);
+            try
+            {
+                var client = await EnsureClientCreated(context);
 
-            // Obtain first page of contacts
-            var contactsResults = await (from i in client.Me.Contacts
-                                        orderby i.DisplayName
-                                        select i).ExecuteAsync();
+                // Obtain first page of contacts
+                var contactsResults = await (from i in client.Me.Contacts
+                                             orderby i.DisplayName
+                                             select i).Take(20).ExecuteAsync();
 
-            return contactsResults.CurrentPage;
+                return contactsResults.CurrentPage;
+            }
+            catch (Exception exception)
+            {
+                //todo handle this
+                var error = exception.ToString();
+            }
+            return null;
         }
 
 #if iOS
