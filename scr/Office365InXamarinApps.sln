@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office365InXamarinApps.Andr
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Office365InXamarinApps", "Office365InXamarinApps\Office365InXamarinApps\Office365InXamarinApps.shproj", "{344EEDF9-3C77-401D-952D-52B5379448DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BB0F4A9D-6246-47DC-A6CB-21B8422DD041}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Office365InXamarinApps\Office365InXamarinApps\Office365InXamarinApps.projitems*{ea70f17e-49d0-41fc-af9d-f6290d805fd8}*SharedItemsImports = 4
